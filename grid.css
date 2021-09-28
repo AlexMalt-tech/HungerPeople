@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div {
+  border: 1px solid #000;
+}
+
+.section {
+  padding: 0 16px;
+}
+
+@media (min-width: 736px) {
+  .section {
+    padding: 0 calc(50% - 368px);
+  }
+}
+
+@media (min-width: 1112px) {
+  .section {
+    padding: 0 calc(50% - 556px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding: 0 calc(50% - 640px);
+  }
+}
+
+.wapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.block-676 {
+  height: 676px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.block-676:nth-child(2n) {
+  background-color: #c1fd9e;
+}
+
+.header {
+  height: 800px;
+  background-image: url(./img/header-bg.jpg);
+}
+
+.chef {
+  background-image: url(./img/chef-bg.jpg);
+}
+
+.spec {
+  background-image: url(./img/spec-bg.jpg);
+}
+
+.menu {
+  height: 920px;
+}
+
+.events {
+  background-image: url(./img/events-bg.jpg);
+}
+
+.photo {
+  height: 360px;
+}
+
+.contacts {
+  height: 648px;
+}
+
+.map {
+  height: 475px;
+}
+
+.footer {
+  height: 100px;
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+}
+/*# sourceMappingURL=grid.css.map */
