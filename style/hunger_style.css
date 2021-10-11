@@ -317,12 +317,6 @@
   color: #ffffff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .section {
   padding: 0 16px;
 }
@@ -332,9 +326,9 @@
     padding: 0 calc(50% - 368px);
   }
 }
-@media (min-width: 1112px) {
+@media (min-width: 1224px) {
   .section {
-    padding: 0 calc(50% - 556px);
+    padding: 0 calc(50% - 612px);
   }
 }
 @media (min-width: 1280px) {
@@ -356,12 +350,14 @@
   flex-grow: 1;
 }
 
-.block-676__rigth {
+.block-676__rigth_dark {
   padding-top: 56px;
-  padding-bottom: 64px;
 }
 .block-676__rigth_contacts {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
 }
 .block-676__rigth_form {
   display: flex;
@@ -381,6 +377,9 @@
   align-items: center;
   justify-content: center;
 }
+.block-676__bottom__text {
+  text-align: center;
+}
 
 .block-676-rev {
   color: #000;
@@ -392,6 +391,9 @@
     flex-direction: column;
     align-items: center;
   }
+  .block-676__rigth {
+    padding-top: 56px;
+  }
   .block-676__text {
     max-width: 720px;
   }
@@ -401,11 +403,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 76px;
   }
   .block-676__left, .block-676__rigth {
     padding-right: 32px;
     padding-left: 32px;
+  }
+  .block-676__rigth {
+    padding-top: 0;
   }
 
   .block-676-contacts {
@@ -485,10 +489,6 @@
     width: 100%;
   }
 }
-.contacts {
-  height: 648px;
-}
-
 .map {
   height: 475px;
 }
@@ -572,38 +572,193 @@
     margin: 0;
   }
 }
+.square {
+  width: 300px;
+  height: 250px;
+  border: 20px solid #E8C300;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 0px 100px #000000);
+  border-radius: 5px;
+  z-index: 1;
+  display: none;
+}
+
 .events {
-  display: flex;
-  background-color: #000000;
+  background-image: url(../img/events-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.events__img {
+.events__wapper {
   display: block;
-  width: 83%;
+  align-items: center;
+  justify-content: space-between;
 }
-.events__text {
-  width: 17%;
+.events__header {
+  height: 100px;
+}
+.events__left {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.events__text__p, .events__text__rev {
+.events__left__header {
+  height: 80px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.events__left__box {
+  width: 100%;
+  height: 475px;
+  background-color: #000000;
+  display: flex;
+  filter: drop-shadow(0px 0px 50px #000000);
+  border-radius: 5px;
+}
+.events__left__box__img {
+  width: 85%;
+  background-image: url(../img/events-wed.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+.events__left__box__pic {
+  width: 100%;
+}
+.events__left__box__text {
+  width: 15%;
+}
+.events__left__box__p {
   font-family: Banny;
-  font-size: 18px;
-  line-height: 12px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 54px;
+  text-indent: 20px;
   text-transform: uppercase;
   color: #FFFFFF;
-}
-.events__text__p {
   transform: rotate(90deg);
 }
-.events__text__rev {
-  transform: rotate(270deg);
+.events__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.events__right__box {
+  width: 100%;
+  height: 475px;
+  background-color: #000000;
+  display: flex;
+  filter: drop-shadow(0px 0px 50px #000000);
+  border-radius: 5px;
+}
+.events__right__box__img {
+  width: 85%;
+  background-image: url(../img/events-party.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+.events__right__box__pic {
+  width: 100%;
+}
+.events__right__box__text {
+  width: 15%;
+}
+.events__right__box__p {
+  height: 100%;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-family: Banny;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 54px;
+  text-indent: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transform: rotate(180deg);
+}
+.events__bottom {
+  height: 100px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.events-light {
+  padding-top: 48px;
+}
+.events-light_bottom {
+  color: rgba(51, 51, 51, 0.5);
+  height: 56px;
+}
+
+.desk-show {
+  display: none;
+}
+
+.mobile-show {
+  display: block;
 }
 
 @media (min-width: 720px) {
-  .events__text__p, .events__text__rev {
-    font-size: 24px;
+  .square {
+    display: block;
+  }
+
+  .events__left__box {
+    width: 570px;
+  }
+  .events__left__square {
+    margin-right: -135px;
+  }
+  .events__right__box {
+    width: 570px;
+  }
+  .events__right__square {
+    margin-left: -135px;
+  }
+
+  .events-light__square {
+    display: block;
+  }
+  .events-light_bottom {
+    height: 100px;
+  }
+}
+@media (min-width: 1224px) {
+  .desk-show {
+    display: flex;
+  }
+
+  .mobile-show {
+    display: none;
+  }
+
+  .square {
+    width: 250px;
+  }
+
+  .events__wapper {
+    display: flex;
+  }
+  .events__left__box {
+    width: 475px;
+  }
+  .events__left__square {
+    margin-right: -135px;
+  }
+  .events__right__box {
+    width: 475px;
+  }
+  .events__right__square {
+    margin-left: -135px;
   }
 }
 @font-face {
@@ -629,30 +784,6 @@
   src: local("OpenSans"), url("../fonts/opensans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.section {
-  padding: 0 16px;
-}
-
-@media (min-width: 736px) {
-  .section {
-    padding: 0 calc(50% - 368px);
-  }
-}
-@media (min-width: 1112px) {
-  .section {
-    padding: 0 calc(50% - 556px);
-  }
-}
-@media (min-width: 1280px) {
-  .section {
-    padding: 0 calc(50% - 640px);
-  }
 }
 .form {
   width: 100%;
@@ -695,6 +826,7 @@
   height: 60px;
   border-radius: 5px;
   border: none;
+  margin-bottom: 24px;
   background-color: #E8C300;
   font-family: Open Sans;
   font-style: normal;
@@ -753,11 +885,6 @@
     align-items: center;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .header {
   height: 667px;
   background-image: url(../img/header-bg.jpg);

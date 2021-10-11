@@ -1,9 +1,9 @@
 @import title-block
 
-*
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+// *
+//     margin: 0
+//     padding: 0
+//     box-sizing: border-box
 
 // div
 //     border: 1px solid #000
@@ -17,14 +17,14 @@
     .section
         padding: 0 calc(50% - 368px)
 
-@media (min-width: 1112px)
+@media (min-width: 1224px)
     .section
-        padding: 0 calc(50% - 556px)
+        padding: 0 calc(50% - 612px)
 
 @media (min-width: 1280px)
     .section
         padding: 0 calc(50% - 640px)
-    
+
 @media (min-width: 1440px)
     .section
         padding: 0 calc(50% - 720px)
@@ -42,11 +42,15 @@
 .block-676
 
     &__rigth
-        padding-top: 56px
-        padding-bottom: 64px
+        &_dark
+            padding-top: 56px
+        // padding-bottom: 64px
 
         &_contacts
             width: 100%
+            display: flex
+            justify-content: center
+            padding-top: 64px
 
         &_form
             display: flex
@@ -67,7 +71,9 @@
         align-items: center
         justify-content: center
         @extend %sub_font
-    
+
+        &__text
+            text-align: center
 
 .block-676-rev
     color: $head_color_dark
@@ -77,6 +83,9 @@
         display: flex
         flex-direction: column
         align-items: center
+
+        &__rigth
+            padding-top: 56px
 
         // &_form
         //     padding-top: 100px
@@ -89,12 +98,15 @@
         flex-direction: row
         justify-content: space-between
         align-items: center
-        padding-bottom: 76px
+        // padding-bottom: 76px
 
         &__left,
         &__rigth
             padding-right: 32px
             padding-left: 32px
+
+        &__rigth
+            padding-top: 0
 
     .block-676-contacts
         flex-direction: column
@@ -159,7 +171,7 @@
         width: 100%
 
 .contacts
-    height: 648px
+    // height: 648px
 .map
     height: 475px
 // ---------------- FOOTER -------------
